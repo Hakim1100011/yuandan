@@ -1,0 +1,1358 @@
+<!doctype html>
+<html>
+<head>
+	<link rel="stylesheet" href="./jscss/style.css" type="text/css" media="all">
+	<!--导库-->
+	<script type="text/javascript" src="./jscss/jquery.js"></script>
+	<!-- 图片幻灯片效果-->
+	<script type="text/javascript" src="./jscss/roundabout.js"></script>
+	<script type="text/javascript" src="./jscss/roundabout_shapes.js"></script>
+	<script type="text/javascript" src="./jscss/gallery_init.js"></script>
+	<!-- 下雪-->
+	<script type="text/javascript" src="./jscss/snowstorm.js"></script>
+	<!-- 打字机效果-->		
+	<script type="text/javascript" src="./jscss/text.js"></script>
+	<!-- 画爱心-->
+	<!-- <script type="text/javascript" src="./jscss/ga.js" async=""></script>
+	<script type="text/javascript" src="./jscss/heart.js"></script> -->
+	<!-- 移动div-->
+	<script type="text/javascript" src="./jscss/move.js"></script>
+	<!-- 显示时间 -->
+	<script type="text/javascript" src="./jscss/time.js"></script>
+	<!-- 设置文字跟随鼠标 -->
+	<script type="text/javascript" src="./jscss/makesnake.js"></script>
+	<script type="text/javascript" src="./jscss/jquery2.js"></script>
+	<script type="text/javascript" src="./jscss/garden.js"></script>
+<meta charset="utf-8">
+<title>hakim</title>
+
+<style>
+body {
+  background: #000000;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#ui .love {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -225px 0 0 -225px;
+}
+#ui .love:last-child .love_word {
+  color: red;
+  font-size: 3.5rem;
+  text-shadow: 0 0 10px red;
+}
+#ui .love_word {
+  color: #fff;
+  font-size: 1.4rem;
+  transform: translateY(-100%) rotateZ(-30deg);
+  font-family: 'Dosis', sans-serif;
+  text-shadow: 0 0 10px #ffc800;
+  letter-spacing: 2px;
+}
+#ui .love_horizontal {
+  animation: horizontal 10000ms infinite alternate ease-in-out;
+}
+#ui .love_vertical {
+  animation: vertical 20000ms infinite linear;
+}
+#ui .love:nth-child(1) .love_horizontal {
+  animation-delay: -300ms;
+}
+#ui .love:nth-child(1) .love_vertical {
+  animation-delay: -300ms;
+}
+#ui .love:nth-child(2) .love_horizontal {
+  animation-delay: -600ms;
+}
+#ui .love:nth-child(2) .love_vertical {
+  animation-delay: -600ms;
+}
+#ui .love:nth-child(3) .love_horizontal {
+  animation-delay: -900ms;
+}
+#ui .love:nth-child(3) .love_vertical {
+  animation-delay: -900ms;
+}
+#ui .love:nth-child(4) .love_horizontal {
+  animation-delay: -1200ms;
+}
+#ui .love:nth-child(4) .love_vertical {
+  animation-delay: -1200ms;
+}
+#ui .love:nth-child(5) .love_horizontal {
+  animation-delay: -1500ms;
+}
+#ui .love:nth-child(5) .love_vertical {
+  animation-delay: -1500ms;
+}
+#ui .love:nth-child(6) .love_horizontal {
+  animation-delay: -1800ms;
+}
+#ui .love:nth-child(6) .love_vertical {
+  animation-delay: -1800ms;
+}
+#ui .love:nth-child(7) .love_horizontal {
+  animation-delay: -2100ms;
+}
+#ui .love:nth-child(7) .love_vertical {
+  animation-delay: -2100ms;
+}
+#ui .love:nth-child(8) .love_horizontal {
+  animation-delay: -2400ms;
+}
+#ui .love:nth-child(8) .love_vertical {
+  animation-delay: -2400ms;
+}
+#ui .love:nth-child(9) .love_horizontal {
+  animation-delay: -2700ms;
+}
+#ui .love:nth-child(9) .love_vertical {
+  animation-delay: -2700ms;
+}
+#ui .love:nth-child(10) .love_horizontal {
+  animation-delay: -3000ms;
+}
+#ui .love:nth-child(10) .love_vertical {
+  animation-delay: -3000ms;
+}
+#ui .love:nth-child(11) .love_horizontal {
+  animation-delay: -3300ms;
+}
+#ui .love:nth-child(11) .love_vertical {
+  animation-delay: -3300ms;
+}
+#ui .love:nth-child(12) .love_horizontal {
+  animation-delay: -3600ms;
+}
+#ui .love:nth-child(12) .love_vertical {
+  animation-delay: -3600ms;
+}
+#ui .love:nth-child(13) .love_horizontal {
+  animation-delay: -3900ms;
+}
+#ui .love:nth-child(13) .love_vertical {
+  animation-delay: -3900ms;
+}
+#ui .love:nth-child(14) .love_horizontal {
+  animation-delay: -4200ms;
+}
+#ui .love:nth-child(14) .love_vertical {
+  animation-delay: -4200ms;
+}
+#ui .love:nth-child(15) .love_horizontal {
+  animation-delay: -4500ms;
+}
+#ui .love:nth-child(15) .love_vertical {
+  animation-delay: -4500ms;
+}
+#ui .love:nth-child(16) .love_horizontal {
+  animation-delay: -4800ms;
+}
+#ui .love:nth-child(16) .love_vertical {
+  animation-delay: -4800ms;
+}
+#ui .love:nth-child(17) .love_horizontal {
+  animation-delay: -5100ms;
+}
+#ui .love:nth-child(17) .love_vertical {
+  animation-delay: -5100ms;
+}
+#ui .love:nth-child(18) .love_horizontal {
+  animation-delay: -5400ms;
+}
+#ui .love:nth-child(18) .love_vertical {
+  animation-delay: -5400ms;
+}
+#ui .love:nth-child(19) .love_horizontal {
+  animation-delay: -5700ms;
+}
+#ui .love:nth-child(19) .love_vertical {
+  animation-delay: -5700ms;
+}
+#ui .love:nth-child(20) .love_horizontal {
+  animation-delay: -6000ms;
+}
+#ui .love:nth-child(20) .love_vertical {
+  animation-delay: -6000ms;
+}
+#ui .love:nth-child(21) .love_horizontal {
+  animation-delay: -6300ms;
+}
+#ui .love:nth-child(21) .love_vertical {
+  animation-delay: -6300ms;
+}
+#ui .love:nth-child(22) .love_horizontal {
+  animation-delay: -6600ms;
+}
+#ui .love:nth-child(22) .love_vertical {
+  animation-delay: -6600ms;
+}
+#ui .love:nth-child(23) .love_horizontal {
+  animation-delay: -6900ms;
+}
+#ui .love:nth-child(23) .love_vertical {
+  animation-delay: -6900ms;
+}
+#ui .love:nth-child(24) .love_horizontal {
+  animation-delay: -7200ms;
+}
+#ui .love:nth-child(24) .love_vertical {
+  animation-delay: -7200ms;
+}
+#ui .love:nth-child(25) .love_horizontal {
+  animation-delay: -7500ms;
+}
+#ui .love:nth-child(25) .love_vertical {
+  animation-delay: -7500ms;
+}
+#ui .love:nth-child(26) .love_horizontal {
+  animation-delay: -7800ms;
+}
+#ui .love:nth-child(26) .love_vertical {
+  animation-delay: -7800ms;
+}
+#ui .love:nth-child(27) .love_horizontal {
+  animation-delay: -8100ms;
+}
+#ui .love:nth-child(27) .love_vertical {
+  animation-delay: -8100ms;
+}
+#ui .love:nth-child(28) .love_horizontal {
+  animation-delay: -8400ms;
+}
+#ui .love:nth-child(28) .love_vertical {
+  animation-delay: -8400ms;
+}
+#ui .love:nth-child(29) .love_horizontal {
+  animation-delay: -8700ms;
+}
+#ui .love:nth-child(29) .love_vertical {
+  animation-delay: -8700ms;
+}
+#ui .love:nth-child(30) .love_horizontal {
+  animation-delay: -9000ms;
+}
+#ui .love:nth-child(30) .love_vertical {
+  animation-delay: -9000ms;
+}
+#ui .love:nth-child(31) .love_horizontal {
+  animation-delay: -9300ms;
+}
+#ui .love:nth-child(31) .love_vertical {
+  animation-delay: -9300ms;
+}
+#ui .love:nth-child(32) .love_horizontal {
+  animation-delay: -9600ms;
+}
+#ui .love:nth-child(32) .love_vertical {
+  animation-delay: -9600ms;
+}
+#ui .love:nth-child(33) .love_horizontal {
+  animation-delay: -9900ms;
+}
+#ui .love:nth-child(33) .love_vertical {
+  animation-delay: -9900ms;
+}
+#ui .love:nth-child(34) .love_horizontal {
+  animation-delay: -10200ms;
+}
+#ui .love:nth-child(34) .love_vertical {
+  animation-delay: -10200ms;
+}
+#ui .love:nth-child(35) .love_horizontal {
+  animation-delay: -10500ms;
+}
+#ui .love:nth-child(35) .love_vertical {
+  animation-delay: -10500ms;
+}
+#ui .love:nth-child(36) .love_horizontal {
+  animation-delay: -10800ms;
+}
+#ui .love:nth-child(36) .love_vertical {
+  animation-delay: -10800ms;
+}
+#ui .love:nth-child(37) .love_horizontal {
+  animation-delay: -11100ms;
+}
+#ui .love:nth-child(37) .love_vertical {
+  animation-delay: -11100ms;
+}
+#ui .love:nth-child(38) .love_horizontal {
+  animation-delay: -11400ms;
+}
+#ui .love:nth-child(38) .love_vertical {
+  animation-delay: -11400ms;
+}
+#ui .love:nth-child(39) .love_horizontal {
+  animation-delay: -11700ms;
+}
+#ui .love:nth-child(39) .love_vertical {
+  animation-delay: -11700ms;
+}
+#ui .love:nth-child(40) .love_horizontal {
+  animation-delay: -12000ms;
+}
+#ui .love:nth-child(40) .love_vertical {
+  animation-delay: -12000ms;
+}
+#ui .love:nth-child(41) .love_horizontal {
+  animation-delay: -12300ms;
+}
+#ui .love:nth-child(41) .love_vertical {
+  animation-delay: -12300ms;
+}
+#ui .love:nth-child(42) .love_horizontal {
+  animation-delay: -12600ms;
+}
+#ui .love:nth-child(42) .love_vertical {
+  animation-delay: -12600ms;
+}
+#ui .love:nth-child(43) .love_horizontal {
+  animation-delay: -12900ms;
+}
+#ui .love:nth-child(43) .love_vertical {
+  animation-delay: -12900ms;
+}
+#ui .love:nth-child(44) .love_horizontal {
+  animation-delay: -13200ms;
+}
+#ui .love:nth-child(44) .love_vertical {
+  animation-delay: -13200ms;
+}
+#ui .love:nth-child(45) .love_horizontal {
+  animation-delay: -13500ms;
+}
+#ui .love:nth-child(45) .love_vertical {
+  animation-delay: -13500ms;
+}
+#ui .love:nth-child(46) .love_horizontal {
+  animation-delay: -13800ms;
+}
+#ui .love:nth-child(46) .love_vertical {
+  animation-delay: -13800ms;
+}
+#ui .love:nth-child(47) .love_horizontal {
+  animation-delay: -14100ms;
+}
+#ui .love:nth-child(47) .love_vertical {
+  animation-delay: -14100ms;
+}
+#ui .love:nth-child(48) .love_horizontal {
+  animation-delay: -14400ms;
+}
+#ui .love:nth-child(48) .love_vertical {
+  animation-delay: -14400ms;
+}
+#ui .love:nth-child(49) .love_horizontal {
+  animation-delay: -14700ms;
+}
+#ui .love:nth-child(49) .love_vertical {
+  animation-delay: -14700ms;
+}
+#ui .love:nth-child(50) .love_horizontal {
+  animation-delay: -15000ms;
+}
+#ui .love:nth-child(50) .love_vertical {
+  animation-delay: -15000ms;
+}
+#ui .love:nth-child(51) .love_horizontal {
+  animation-delay: -15300ms;
+}
+#ui .love:nth-child(51) .love_vertical {
+  animation-delay: -15300ms;
+}
+#ui .love:nth-child(52) .love_horizontal {
+  animation-delay: -15600ms;
+}
+#ui .love:nth-child(52) .love_vertical {
+  animation-delay: -15600ms;
+}
+#ui .love:nth-child(53) .love_horizontal {
+  animation-delay: -15900ms;
+}
+#ui .love:nth-child(53) .love_vertical {
+  animation-delay: -15900ms;
+}
+#ui .love:nth-child(54) .love_horizontal {
+  animation-delay: -16200ms;
+}
+#ui .love:nth-child(54) .love_vertical {
+  animation-delay: -16200ms;
+}
+#ui .love:nth-child(55) .love_horizontal {
+  animation-delay: -16500ms;
+}
+#ui .love:nth-child(55) .love_vertical {
+  animation-delay: -16500ms;
+}
+#ui .love:nth-child(56) .love_horizontal {
+  animation-delay: -16800ms;
+}
+#ui .love:nth-child(56) .love_vertical {
+  animation-delay: -16800ms;
+}
+#ui .love:nth-child(57) .love_horizontal {
+  animation-delay: -17100ms;
+}
+#ui .love:nth-child(57) .love_vertical {
+  animation-delay: -17100ms;
+}
+#ui .love:nth-child(58) .love_horizontal {
+  animation-delay: -17400ms;
+}
+#ui .love:nth-child(58) .love_vertical {
+  animation-delay: -17400ms;
+}
+#ui .love:nth-child(59) .love_horizontal {
+  animation-delay: -17700ms;
+}
+#ui .love:nth-child(59) .love_vertical {
+  animation-delay: -17700ms;
+}
+#ui .love:nth-child(60) .love_horizontal {
+  animation-delay: -18000ms;
+}
+#ui .love:nth-child(60) .love_vertical {
+  animation-delay: -18000ms;
+}
+#ui .love:nth-child(61) .love_horizontal {
+  animation-delay: -18300ms;
+}
+#ui .love:nth-child(61) .love_vertical {
+  animation-delay: -18300ms;
+}
+#ui .love:nth-child(62) .love_horizontal {
+  animation-delay: -18600ms;
+}
+#ui .love:nth-child(62) .love_vertical {
+  animation-delay: -18600ms;
+}
+#ui .love:nth-child(63) .love_horizontal {
+  animation-delay: -18900ms;
+}
+#ui .love:nth-child(63) .love_vertical {
+  animation-delay: -18900ms;
+}
+#ui .love:nth-child(64) .love_horizontal {
+  animation-delay: -19200ms;
+}
+#ui .love:nth-child(64) .love_vertical {
+  animation-delay: -19200ms;
+}
+#ui .love:nth-child(65) .love_horizontal {
+  animation-delay: -19500ms;
+}
+#ui .love:nth-child(65) .love_vertical {
+  animation-delay: -19500ms;
+}
+#ui .love:nth-child(66) .love_horizontal {
+  animation-delay: -19800ms;
+}
+#ui .love:nth-child(66) .love_vertical {
+  animation-delay: -19800ms;
+}
+#ui .love:nth-child(67) .love_horizontal {
+  animation-delay: -20100ms;
+}
+#ui .love:nth-child(67) .love_vertical {
+  animation-delay: -20100ms;
+}
+#ui .love:nth-child(68) .love_horizontal {
+  animation-delay: -20400ms;
+}
+#ui .love:nth-child(68) .love_vertical {
+  animation-delay: -20400ms;
+}
+#ui .love:nth-child(69) .love_horizontal {
+  animation-delay: -20700ms;
+}
+#ui .love:nth-child(69) .love_vertical {
+  animation-delay: -20700ms;
+}
+#ui .love:nth-child(70) .love_horizontal {
+  animation-delay: -21000ms;
+}
+#ui .love:nth-child(70) .love_vertical {
+  animation-delay: -21000ms;
+}
+#ui .love:nth-child(71) .love_horizontal {
+  animation-delay: -21300ms;
+}
+#ui .love:nth-child(71) .love_vertical {
+  animation-delay: -21300ms;
+}
+#ui .love:nth-child(72) .love_horizontal {
+  animation-delay: -21600ms;
+}
+#ui .love:nth-child(72) .love_vertical {
+  animation-delay: -21600ms;
+}
+#ui .love:nth-child(73) .love_horizontal {
+  animation-delay: -21900ms;
+}
+#ui .love:nth-child(73) .love_vertical {
+  animation-delay: -21900ms;
+}
+#ui .love:nth-child(74) .love_horizontal {
+  animation-delay: -22200ms;
+}
+#ui .love:nth-child(74) .love_vertical {
+  animation-delay: -22200ms;
+}
+#ui .love:nth-child(75) .love_horizontal {
+  animation-delay: -22500ms;
+}
+#ui .love:nth-child(75) .love_vertical {
+  animation-delay: -22500ms;
+}
+#ui .love:nth-child(76) .love_horizontal {
+  animation-delay: -22800ms;
+}
+#ui .love:nth-child(76) .love_vertical {
+  animation-delay: -22800ms;
+}
+#ui .love:nth-child(77) .love_horizontal {
+  animation-delay: -23100ms;
+}
+#ui .love:nth-child(77) .love_vertical {
+  animation-delay: -23100ms;
+}
+#ui .love:nth-child(78) .love_horizontal {
+  animation-delay: -23400ms;
+}
+#ui .love:nth-child(78) .love_vertical {
+  animation-delay: -23400ms;
+}
+#ui .love:nth-child(79) .love_horizontal {
+  animation-delay: -23700ms;
+}
+#ui .love:nth-child(79) .love_vertical {
+  animation-delay: -23700ms;
+}
+#ui .love:nth-child(80) .love_horizontal {
+  animation-delay: -24000ms;
+}
+#ui .love:nth-child(80) .love_vertical {
+  animation-delay: -24000ms;
+}
+#ui .love:nth-child(81) .love_horizontal {
+  animation-delay: -24300ms;
+}
+#ui .love:nth-child(81) .love_vertical {
+  animation-delay: -24300ms;
+}
+#ui .love:nth-child(82) .love_horizontal {
+  animation-delay: -24600ms;
+}
+#ui .love:nth-child(82) .love_vertical {
+  animation-delay: -24600ms;
+}
+#ui .love:nth-child(83) .love_horizontal {
+  animation-delay: -24900ms;
+}
+#ui .love:nth-child(83) .love_vertical {
+  animation-delay: -24900ms;
+}
+#ui .love:nth-child(84) .love_horizontal {
+  animation-delay: -25200ms;
+}
+#ui .love:nth-child(84) .love_vertical {
+  animation-delay: -25200ms;
+}
+#ui .love:nth-child(85) .love_horizontal {
+  animation-delay: -25500ms;
+}
+#ui .love:nth-child(85) .love_vertical {
+  animation-delay: -25500ms;
+}
+#ui .love:nth-child(86) .love_horizontal {
+  animation-delay: -25800ms;
+}
+#ui .love:nth-child(86) .love_vertical {
+  animation-delay: -25800ms;
+}
+#ui .love:nth-child(87) .love_horizontal {
+  animation-delay: -26100ms;
+}
+#ui .love:nth-child(87) .love_vertical {
+  animation-delay: -26100ms;
+}
+#ui .love:nth-child(88) .love_horizontal {
+  animation-delay: -26400ms;
+}
+#ui .love:nth-child(88) .love_vertical {
+  animation-delay: -26400ms;
+}
+#ui .love:nth-child(89) .love_horizontal {
+  animation-delay: -26700ms;
+}
+#ui .love:nth-child(89) .love_vertical {
+  animation-delay: -26700ms;
+}
+#ui .love:nth-child(90) .love_horizontal {
+  animation-delay: -27000ms;
+}
+#ui .love:nth-child(90) .love_vertical {
+  animation-delay: -27000ms;
+}
+#ui .love:nth-child(91) .love_horizontal {
+  animation-delay: -27300ms;
+}
+#ui .love:nth-child(91) .love_vertical {
+  animation-delay: -27300ms;
+}
+#ui .love:nth-child(92) .love_horizontal {
+  animation-delay: -27600ms;
+}
+#ui .love:nth-child(92) .love_vertical {
+  animation-delay: -27600ms;
+}
+#ui .love:nth-child(93) .love_horizontal {
+  animation-delay: -27900ms;
+}
+#ui .love:nth-child(93) .love_vertical {
+  animation-delay: -27900ms;
+}
+#ui .love:nth-child(94) .love_horizontal {
+  animation-delay: -28200ms;
+}
+#ui .love:nth-child(94) .love_vertical {
+  animation-delay: -28200ms;
+}
+#ui .love:nth-child(95) .love_horizontal {
+  animation-delay: -28500ms;
+}
+#ui .love:nth-child(95) .love_vertical {
+  animation-delay: -28500ms;
+}
+#ui .love:nth-child(96) .love_horizontal {
+  animation-delay: -28800ms;
+}
+#ui .love:nth-child(96) .love_vertical {
+  animation-delay: -28800ms;
+}
+#ui .love:nth-child(97) .love_horizontal {
+  animation-delay: -29100ms;
+}
+#ui .love:nth-child(97) .love_vertical {
+  animation-delay: -29100ms;
+}
+#ui .love:nth-child(98) .love_horizontal {
+  animation-delay: -29400ms;
+}
+#ui .love:nth-child(98) .love_vertical {
+  animation-delay: -29400ms;
+}
+#ui .love:nth-child(99) .love_horizontal {
+  animation-delay: -29700ms;
+}
+#ui .love:nth-child(99) .love_vertical {
+  animation-delay: -29700ms;
+}
+#ui .love:nth-child(100) .love_horizontal {
+  animation-delay: -30000ms;
+}
+#ui .love:nth-child(100) .love_vertical {
+  animation-delay: -30000ms;
+}
+
+@keyframes horizontal {
+  from {
+    transform: translateX(0px);
+  }
+  to {
+    transform: translateX(450px);
+  }
+}
+@keyframes vertical {
+  0% {
+    transform: translateY(180px);
+  }
+  10% {
+    transform: translateY(45px);
+  }
+  15% {
+    transform: translateY(4.5px);
+  }
+  18% {
+    transform: translateY(0px);
+  }
+  20% {
+    transform: translateY(4.5px);
+  }
+  22% {
+    transform: translateY(34.61538px);
+  }
+  24% {
+    transform: translateY(64.28571px);
+  }
+  25% {
+    transform: translateY(112.5px);
+  }
+  26% {
+    transform: translateY(64.28571px);
+  }
+  28% {
+    transform: translateY(34.61538px);
+  }
+  30% {
+    transform: translateY(4.5px);
+  }
+  32% {
+    transform: translateY(0px);
+  }
+  35% {
+    transform: translateY(4.5px);
+  }
+  40% {
+    transform: translateY(45px);
+  }
+  50% {
+    transform: translateY(180px);
+  }
+  71% {
+    transform: translateY(428.57143px);
+  }
+  72.5% {
+    transform: translateY(441.17647px);
+  }
+  75% {
+    transform: translateY(450px);
+  }
+  77.5% {
+    transform: translateY(441.17647px);
+  }
+  79% {
+    transform: translateY(428.57143px);
+  }
+  100% {
+    transform: translateY(180px);
+  }
+}
+</style>
+<link rel="stylesheet" href="./jscss/style.css" type="text/css" media="all">
+		<!--导库-->
+		<script type="text/javascript" src="./jscss/jquery.js"></script>
+		<!-- 图片幻灯片效果-->
+		<script type="text/javascript" src="./jscss/roundabout.js"></script>
+		<script type="text/javascript" src="./jscss/roundabout_shapes.js"></script>
+		<script type="text/javascript" src="./jscss/gallery_init.js"></script>
+		<!-- 下雪-->
+		<script type="text/javascript" src="./jscss/snowstorm.js"></script>
+		<!-- 打字机效果-->		
+		<script type="text/javascript" src="./jscss/text.js"></script>
+		<!-- 画爱心-->
+		<!-- <script type="text/javascript" src="./jscss/ga.js" async=""></script>
+		<script type="text/javascript" src="./jscss/heart.js"></script> -->
+		<!-- 移动div-->
+		<script type="text/javascript" src="./jscss/move.js"></script>
+		<!-- 显示时间 -->
+		<script type="text/javascript" src="./jscss/time.js"></script>
+		<!-- 设置文字跟随鼠标 -->
+		<script type="text/javascript" src="./jscss/makesnake.js"></script>
+		<script type="text/javascript" src="./jscss/jquery2.js"></script>
+		<script type="text/javascript" src="./jscss/garden.js"></script>
+</head>
+<body>
+	<div id="myContent">
+			<span id="blink" style="display: none;">_</span>
+			</div>
+			
+	<div id="contentToWrite" style="display:none;color: #CCFF99;">
+		 <br />
+			2015/10/31 20:30        <br>
+			一个令人难忘的夜晚<br>
+			很幸运，上天给我安排了无BUG的你.<br>
+			不管经历过什么,我仍坚信最浪漫的事就是和<br>
+			你一起慢慢变老.<br>
+			曾经的点点滴滴，从相识到现在，<br>
+			从冷漠到关心，从生疏到相爱,<br>
+			一切似乎都是那么遥远,又似乎那么触手可及.<br>
+			正如某人说的那样,但求岁月静好,现世安稳.<br>
+			一生守候不是一句简单而苍白的山盟海誓，<br>
+			而是无数个平淡的日子同舟共济，相濡以沫.<br>
+			相信我们的计时器,将永远继续下去<br />
+			直至数据溢出.<br>
+			<br>
+			------------------------------Just for You<br>
+	</div>
+	<div id="shijian" style="margin-left: 10px;margin-top: 10px;">
+		<span id="show"></span>
+		<script type="text/javascript">
+			setTimeout("showTime()");
+		</script>
+	</div>
+	<div id="showGo"  style="background-color: #000000;position: absolute;margin-left: 38%;margin-top: 56%;">
+	<img style="width: 300px;height:350px;border-radius:500px" src="jscss/7.jpg" >
+	</div>
+	<!-- <div style="margin-left: 40%;margin-top: 75%;"><img src="jscss/1.jpg" /></div> -->
+
+	<div  >
+	 <canvas id="c"></canvas>
+	
+	</div>
+<div>
+
+	<div id="ui" >
+	  <div class="love">
+	    <div class="love_horizontal">
+	      <div class="love_vertical">
+	        <div class="love_word">林豪景</div>
+	      </div>
+	    </div>
+	  </div>
+	  <div class="love">
+	    <div class="love_horizontal">
+	      <div class="love_vertical">
+	        <div class="love_word">林佛清</div>
+	      </div>
+	    </div>
+	  </div>
+	  <div class="love">
+	    <div class="love_horizontal">
+	      <div class="love_vertical">
+	        <div class="love_word">2015</div>
+	      </div>
+	    </div>
+	  </div>
+	  <div class="love">
+	    <div class="love_horizontal">
+	      <div class="love_vertical">
+	        <div class="love_word">10</div>
+	      </div>
+	    </div>
+	  </div>
+	  <div class="love">
+	    <div class="love_horizontal">
+	      <div class="love_vertical">
+	        <div class="love_word">31</div>
+	      </div>
+	    </div>
+	  </div>
+	  <div class="love">
+	    <div class="love_horizontal">
+	      <div class="love_vertical">
+	        <div class="love_word">北京路</div>
+	      </div>
+	    </div>
+	  </div>
+	  <div class="love">
+	    <div class="love_horizontal">
+	      <div class="love_vertical">
+	        <div class="love_word">万圣节</div>
+	      </div>
+	    </div>
+	  </div>
+	  <div class="love">
+	    <div class="love_horizontal">
+	      <div class="love_vertical">
+	        <div class="love_word">20：00</div>
+	      </div>
+	    </div>
+	  </div>
+	  <div class="love">
+	    <div class="love_horizontal">
+	      <div class="love_vertical">
+	        <div class="love_word">z正式在一起</div>
+	      </div>
+	    </div>
+	  </div>
+	  <div class="love">
+	    <div class="love_horizontal">
+	      <div class="love_vertical">
+	        <div class="love_word">四年来</div>
+	      </div>
+	    </div>
+	  </div>
+	  <div class="love">
+	    <div class="love_horizontal">
+	      <div class="love_vertical">
+	        <div class="love_word">有过争吵</div>
+	      </div>
+	    </div>
+	  </div>
+	  <div class="love">
+	    <div class="love_horizontal">
+	      <div class="love_vertical">
+	        <div class="love_word">有过恩爱</div>
+	      </div>
+	    </div>
+	  </div>
+	  <div class="love">
+	    <div class="love_horizontal">
+	      <div class="love_vertical">
+	        <div class="love_word">有过泪汪汪</div>
+	      </div>
+	    </div>
+	  </div>
+	  <div class="love">
+	    <div class="love_horizontal">
+	      <div class="love_vertical">
+	        <div class="love_word">感谢上天</div>
+	      </div>
+	    </div>
+	  </div>
+	  <div class="love">
+	    <div class="love_horizontal">
+	      <div class="love_vertical">
+	        <div class="love_word">给我</div>
+	      </div>
+	    </div>
+	  </div>
+	  <div class="love">
+	    <div class="love_horizontal">
+	      <div class="love_vertical">
+	        <div class="love_word">安排</div>
+	      </div>
+	    </div>
+	  </div>
+	  <div class="love">
+	    <div class="love_horizontal">
+	      <div class="love_vertical">
+	        <div class="love_word">最好的</div>
+	      </div>
+	    </div>
+	  </div>
+	  <div class="love">
+	    <div class="love_horizontal">
+	      <div class="love_vertical">
+	        <div class="love_word">宝宝</div>
+	      </div>
+	    </div>
+	  </div>
+	  <div class="love">
+	    <div class="love_horizontal">
+	      <div class="love_vertical">
+	        <div class="love_word">以后</div>
+	      </div>
+	    </div>
+	  </div>
+	  <div class="love">
+	    <div class="love_horizontal">
+	      <div class="love_vertical">
+	        <div class="love_word">不管发生什么</div>
+	      </div>
+	    </div>
+	  </div>
+	  <div class="love">
+	    <div class="love_horizontal">
+	      <div class="love_vertical">
+	        <div class="love_word">我都会</div>
+	      </div>
+	    </div>
+	  </div>
+	  <div class="love">
+	    <div class="love_horizontal">
+	      <div class="love_vertical">
+	        <div class="love_word">爱</div>
+	      </div>
+	    </div>
+	  </div>
+	  <div class="love">
+	    <div class="love_horizontal">
+	      <div class="love_vertical">
+	        <div class="love_word">爱</div>
+	      </div>
+	    </div>
+	  </div>
+	  <div class="love">
+	    <div class="love_horizontal">
+	      <div class="love_vertical">
+	        <div class="love_word">你</div>
+	      </div>
+	    </div>
+	  </div>
+	  <div class="love">
+	    <div class="love_horizontal">
+	      <div class="love_vertical">
+	        <div class="love_word">我们</div>
+	      </div>
+	    </div>
+	  </div>
+	  <div class="love">
+	    <div class="love_horizontal">
+	      <div class="love_vertical">
+	        <div class="love_word">一辈子很短</div>
+	      </div>
+	    </div>
+	  </div>
+	  <div class="love">
+	    <div class="love_horizontal">
+	      <div class="love_vertical">
+	        <div class="love_word">我想和你</div>
+	      </div>
+	    </div>
+	  </div>
+	  <div class="love">
+	    <div class="love_horizontal">
+	      <div class="love_vertical">
+	        <div class="love_word">朝夕相处</div>
+	      </div>
+	    </div>
+	  </div>
+	  <div class="love">
+	    <div class="love_horizontal">
+	      <div class="love_vertical">
+	        <div class="love_word">相濡以沫</div>
+	      </div>
+	    </div>
+	  </div>
+	  <div class="love">
+	    <div class="love_horizontal">
+	      <div class="love_vertical">
+	        <div class="love_word">厮守一生</div>
+	      </div>
+	    </div>
+	  </div>
+	  <div class="love">
+	    <div class="love_horizontal">
+	      <div class="love_vertical">
+	        <div class="love_word">遇一人</div>
+	      </div>
+	    </div>
+	  </div>
+	  <div class="love">
+	    <div class="love_horizontal">
+	      <div class="love_vertical">
+	        <div class="love_word">不容易</div>
+	      </div>
+	    </div>
+	  </div>
+	  <div class="love">
+	    <div class="love_horizontal">
+	      <div class="love_vertical">
+	        <div class="love_word">好好珍惜</div>
+	      </div>
+	    </div>
+	  </div>
+	  <div class="love">
+	    <div class="love_horizontal">
+	      <div class="love_vertical">
+	        <div class="love_word">Sevgi</div>
+	      </div>
+	    </div>
+	  </div>
+	  <div class="love">
+	    <div class="love_horizontal">
+	      <div class="love_vertical">
+	        <div class="love_word">?убав</div>
+	      </div>
+	    </div>
+	  </div>
+	  <div class="love">
+	    <div class="love_horizontal">
+	      <div class="love_vertical">
+	        <div class="love_word">karout</div>
+	      </div>
+	    </div>
+	  </div>
+	  <div class="love">
+	    <div class="love_horizontal">
+	      <div class="love_vertical">
+	        <div class="love_word">amà</div>
+	      </div>
+	    </div>
+	  </div>
+	  <div class="love">
+	    <div class="love_horizontal">
+	      <div class="love_vertical">
+	        <div class="love_word">am?r</div>
+	      </div>
+	    </div>
+	  </div>
+	  <div class="love">
+	    <div class="love_horizontal">
+	      <div class="love_vertical">
+	        <div class="love_word">k?rleiki</div>
+	      </div>
+	    </div>
+	  </div>
+	  <div class="love">
+	    <div class="love_horizontal">
+	      <div class="love_vertical">
+	        <div class="love_word">mborayhu</div>
+	      </div>
+	    </div>
+	  </div>
+	  <div class="love">
+	    <div class="love_horizontal">
+	      <div class="love_vertical">
+	        <div class="love_word">Upendo</div>
+	      </div>
+	    </div>
+	  </div>
+	  <div class="love">
+	    <div class="love_horizontal">
+	      <div class="love_vertical">
+	        <div class="love_word">sòòyayyàà</div>
+	      </div>
+	    </div>
+	  </div>
+	  <div class="love">
+	    <div class="love_horizontal">
+	      <div class="love_vertical">
+	        <div class="love_word">ljubav</div>
+	      </div>
+	    </div>
+	  </div>
+	  <div class="love">
+	    <div class="love_horizontal">
+	      <div class="love_vertical">
+	        <div class="love_word">???</div>
+	      </div>
+	    </div>
+	  </div>
+	  <div class="love">
+	    <div class="love_horizontal">
+	      <div class="love_vertical">
+	        <div class="love_word">с?ю</div>
+	      </div>
+	    </div>
+	  </div>
+	  <div class="love">
+	    <div class="love_horizontal">
+	      <div class="love_vertical">
+	        <div class="love_word">最爱的宝宝?</div>
+	      </div>
+	    </div>
+	  </div>
+	  <div class="love">
+	    <div class="love_horizontal">
+	      <div class="love_vertical">
+	        <div class="love_word">с?й??</div>
+	      </div>
+	    </div>
+	  </div>
+	  <div class="love">
+	    <div class="love_horizontal">
+	      <div class="love_vertical">
+	        <div class="love_word">tia</div>
+	      </div>
+	    </div>
+	  </div>
+	  <div class="love">
+	    <div class="love_horizontal">
+	      <div class="love_vertical">
+	        <div class="love_word">爱宝宝</div>
+	      </div>
+	    </div>
+	  </div>
+	  <div class="love">
+	    <div class="love_horizontal">
+	      <div class="love_vertical">
+	        <div class="love_word">KHAIR</div>
+	      </div>
+	    </div>
+	  </div>
+	  <div class="love">
+	    <div class="love_horizontal">
+	      <div class="love_vertical">
+	        <div class="love_word">?????</div>
+	      </div>
+	    </div>
+	  </div>
+	  <div class="love">
+	    <div class="love_horizontal">
+	      <div class="love_vertical">
+	        <div class="love_word">一起旅游</div>
+	      </div>
+	    </div>
+	  </div>
+	  <div class="love">
+	    <div class="love_horizontal">
+	      <div class="love_vertical">
+	        <div class="love_word">munay</div>
+	      </div>
+	    </div>
+	  </div>
+	  <div class="love">
+	    <div class="love_horizontal">
+	      <div class="love_vertical">
+	        <div class="love_word">一辈子</div>
+	      </div>
+	    </div>
+	  </div>
+	  <div class="love">
+	    <div class="love_horizontal">
+	      <div class="love_vertical">
+	        <div class="love_word">K?rlek</div>
+	      </div>
+	    </div>
+	  </div>
+	  <div class="love">
+	    <div class="love_horizontal">
+	      <div class="love_vertical">
+	        <div class="love_word">soymek</div>
+	      </div>
+	    </div>
+	  </div>
+	  <div class="love">
+	    <div class="love_horizontal">
+	      <div class="love_vertical">
+	        <div class="love_word">感恩</div>
+	      </div>
+	    </div>
+	  </div>
+	  <div class="love">
+	    <div class="love_horizontal">
+	      <div class="love_vertical">
+	        <div class="love_word">ярату</div>
+	      </div>
+	    </div>
+	  </div>
+	  <div class="love">
+	    <div class="love_horizontal">
+	      <div class="love_vertical">
+	        <div class="love_word">谢谢宝宝的宽容</div>
+	      </div>
+	    </div>
+	  </div>
+	  <div class="love">
+	    <div class="love_horizontal">
+	      <div class="love_vertical">
+	        <div class="love_word">sopp</div>
+	      </div>
+	    </div>
+	  </div>
+	  <div class="love">
+	    <div class="love_horizontal">
+	      <div class="love_vertical">
+	        <div class="love_word">漂亮</div>
+	      </div>
+	    </div>
+	  </div>
+	  <div class="love">
+	    <div class="love_horizontal">
+	      <div class="love_vertical">
+	        <div class="love_word">幸福</div>
+	      </div>
+	    </div>
+	  </div>
+	  <div class="love">
+	    <div class="love_horizontal">
+	      <div class="love_vertical">
+	        <div class="love_word">A?k</div>
+	      </div>
+	    </div>
+	  </div>
+	  <div class="love">
+	    <div class="love_horizontal">
+	      <div class="love_vertical">
+	        <div class="love_word">感谢有宝宝</div>
+	      </div>
+	    </div>
+	  </div>
+	  <div class="love">
+	    <div class="love_horizontal">
+	      <div class="love_vertical">
+	        <div class="love_word">????</div>
+	      </div>
+	    </div>
+	  </div>
+	  <div class="love">
+	    <div class="love_horizontal">
+	      <div class="love_vertical">
+	        <div class="love_word">Love</div>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+</div>
+
+<script>
+	setTimeout(function(){
+$("#showGo").show("slow");
+},3000);
+	
+	setTimeout(move, 1000);
+				writeContent(true);
+	
+				var offsetX = $("#loveHeart").width() / 2;
+						var offsetY = $("#loveHeart").height() / 2 - 55;
+						var nolovetime = new Date();
+						nolovetime.setFullYear(2014, 01, 01);
+						nolovetime.setHours(0);
+						nolovetime.setMinutes(0);
+						nolovetime.setSeconds(0);
+						nolovetime.setMilliseconds(0);
+						
+						if (!document.createElement('canvas').getContext) {
+							var msg = document.createElement("div");
+							msg.id = "errorMsg";
+							msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+"; 
+							document.body.appendChild(msg);
+							$("#code").css("display", "none")
+							$("#copyright").css("position", "absolute");
+							$("#copyright").css("bottom", "10px");
+						    document.execCommand("stop");
+						} else {
+							setTimeout(function () {
+								startHeartAnimation();
+							}, 100);
+				
+							timeElapse(nolovetime);
+							setInterval(function () {
+								timeElapse(nolovetime);
+							}, 500);
+				
+							adjustCodePosition();
+							$("#code").typewriter();
+						}
+	
+	
+    var c = document.getElementById("c");
+var ctx = c.getContext("2d");
+ 
+//制作全屏
+c.height = window.innerHeight;
+c.width = window.innerWidth;
+ 
+//汉字从Unicode字符集
+var chinese = "igeekbar~";
+//将字符串转换为一个数组中的单个字符
+chinese = chinese.split("");
+ 
+var font_size = 20;
+var columns = c.width/font_size; //雨的列数
+//每列的一个数组
+var drops = [];
+//下面是×坐标
+//1 = y 在下降（最初是相同的）
+for(var x = 0; x < columns; x++)
+ drops[x] = 1; 
+ 
+//画
+function draw()
+{
+ //黑BG的帆布
+ //半透明BG显示轨迹
+ ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
+ ctx.fillRect(0, 0, c.width, c.height);
+  
+ ctx.fillStyle = "#0F0"; //字体颜色
+ ctx.font = font_size + "px arial";
+ //循环字体
+ for(var i = 0; i < drops.length; i++)
+ {
+  //随机汉字打印
+  var text = chinese[Math.floor(Math.random()*chinese.length)];
+  //x = i*font_size, y = value of drops[i]*font_size
+  ctx.fillText(text, i*font_size, drops[i]*font_size);
+   
+  //在屏幕上划线后，把它的顶部随机发送到顶部
+  //将一个随机性添加到复位中，使分散在轴上的下降
+  if(drops[i]*font_size > c.height && Math.random() > 0.975)
+   drops[i] = 0;
+   
+  //增加的Y坐标
+  drops[i]++;
+ }
+}
+ 
+setInterval(draw, 33);
+</script>
+</body>
+</html>
